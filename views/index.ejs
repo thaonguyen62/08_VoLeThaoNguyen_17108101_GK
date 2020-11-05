@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type='text/css' href="/css/bootstrap.min.css"/>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <table class="table table-bordered table-hover" id="tblData">
+                <thead>
+                   <tr>
+                    <td>STT</td>
+                    <td>Tên linh kiện</td>
+                    <td>Đơn vị tính</td>
+                    <td>Giá</td>
+                    <td>Chi tiết</td>
+
+                   </tr>
+                </thead>
+                <tbody>
+                    <% Datatbl.forEach(function(item) { %>
+                        <tr>
+                            <td class="id"><%=item.id%></td>
+                            <td class="ten"><%=item.ten%></td>
+                            <td class="dvt"><%=item.dvt%></td>
+                            <td class="gia"><%=item.gia%></td>
+                            <td class="chitiet"><%=item.chitiet%></td>
+
+                        </tr>
+
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
